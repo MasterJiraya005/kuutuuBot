@@ -14,7 +14,7 @@ def is_enabled(value, default):
 SESSION = environ.get('SESSION', 'Media_search')
 API_ID = int(environ.get('API_ID', '24579842'))
 API_HASH = environ.get('API_HASH', 'ec6105bf1a02c98f837300546dc341d1')
-BOT_TOKEN = environ.get('BOT_TOKEN', '6715049327:AAFQGQgR-C3FslTuMdLbwnxDnJWEKPtm7Qk')
+BOT_TOKEN = environ.get('BOT_TOKEN', '6800243382:AAETUSgyvZaSp-e43fo76FFsA-2XstHDRZI')
 
 # Bot settings
 CACHE_TIME = int(environ.get('CACHE_TIME', 300))
@@ -27,25 +27,25 @@ CHANNELS = [int(ch) if id_pattern.search(ch) else ch for ch in environ.get('CHAN
 auth_users = [int(user) if id_pattern.search(user) else user for user in environ.get('AUTH_USERS', '').split()]
 AUTH_USERS = (auth_users + ADMINS) if auth_users else []
 auth_channel = environ.get('AUTH_CHANNEL')
-auth_grp = environ.get('AUTH_GROUP')
+auth_grp = environ.get('AUTH_GROUP', '-1001855492809')
 AUTH_CHANNEL = environ.get('AUTH_CHANNEL')
 AUTH_GROUPS = [int(ch) for ch in auth_grp.split()] if auth_grp else None
 
 # MongoDB information
-DATABASE_URI = environ.get('DATABASE_URI', "mongodb+srv://happythehour:skumar(2006)@cluster0.wttyshn.mongodb.net/?retryWrites=true&w=majority")
-DATABASE_NAME = environ.get('DATABASE_NAME', "SANDIP")
+DATABASE_URI = environ.get('DATABASE_URI', "mongodb+srv://thehappyhour009:#Scm20006#@cluster0.e5xoof7.mongodb.net/?retryWrites=true&w=majority")
+DATABASE_NAME = environ.get('DATABASE_NAME', "#LUFFY")
 COLLECTION_NAME = environ.get('COLLECTION_NAME', 'Telegram_files')
 
 # Others
-LOG_CHANNEL = int(environ.get('LOG_CHANNEL', '-1001939252420'))
+LOG_CHANNEL = int(environ.get('LOG_CHANNEL', '-1002139657732'))
 SUPPORT_CHAT = environ.get('SUPPORT_CHAT', 'Happy_Hour_Friends')
-P_TTI_SHOW_OFF = is_enabled((environ.get('P_TTI_SHOW_OFF', 'False')), False)
+P_TTI_SHOW_OFF = is_enabled((environ.get('P_TTI_SHOW_OFF', 'True')), False)
 IMDB = is_enabled((environ.get('IMDB', 'False')), True)
 SINGLE_BUTTON = is_enabled((environ.get('SINGLE_BUTTON', 'True')), False)
-CUSTOM_FILE_CAPTION = environ.get("CUSTOM_FILE_CAPTION", "<b><a href=https://t.me/The_Happy_Hours>{file_name}</a></b>")
-BATCH_FILE_CAPTION = environ.get("BATCH_FILE_CAPTION", "<b><a href=https://t.me/Happy_Hour_Friends>{file_name}</a></b>")
+CUSTOM_FILE_CAPTION = environ.get("CUSTOM_FILE_CAPTION", '<b><a href="https://t.me/The_Happy_Hours">{file_name}\n\n➪ बैकअप चैनल ज्वाइन करके रखें। 🙏\n➪ कॉपीराइट कभी भी आ सकता है। 🥹\n\nBᴀᴄᴋᴜᴘ Cʜᴀɴɴᴇʟ - Click Here</a></b>')
+BATCH_FILE_CAPTION = environ.get("BATCH_FILE_CAPTION", '<b><a href="https://t.me/The_Happy_Hours">{file_name}\n\n➪ बैकअप चैनल ज्वाइन करके रखें। 🙏\n➪ कॉपीराइट कभी भी आ सकता है। 🥹\n\nBᴀᴄᴋᴜᴘ Cʜᴀɴɴᴇʟ - Click Here</a></b>')
 IMDB_TEMPLATE = environ.get("IMDB_TEMPLATE", "🍿 Title: <a href={url}>{title}</a>\n🎃 Genres: {genres}\n📅 Year: <a href={url}/releaseinfo>{year}</a>\n⭐ Rating: <a href={url}/ratings>{rating}</a> / 10\n🔉 Audio: हिंदी + English\n\n📕 Story: {plot}")
-LONG_IMDB_DESCRIPTION = is_enabled(environ.get("LONG_IMDB_DESCRIPTION", "True"), True)
+LONG_IMDB_DESCRIPTION = is_enabled(environ.get("LONG_IMDB_DESCRIPTION", "False"), True)
 SPELL_CHECK_REPLY = is_enabled(environ.get("SPELL_CHECK_REPLY", "True"), True)
 MAX_LIST_ELM = environ.get("MAX_LIST_ELM", None)
 INDEX_REQ_CHANNEL = int(environ.get('INDEX_REQ_CHANNEL', LOG_CHANNEL))
